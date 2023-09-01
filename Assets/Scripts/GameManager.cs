@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
                 brick.onDestroyed.AddListener(AddPoint);
             }
         }
+        mainManager.LoadBestScore();
         UpdateBestScore();
     }
 
@@ -78,6 +79,7 @@ public class GameManager : MonoBehaviour
         m_GameOver = true;
         GameOverText.SetActive(true);
         UpdateBestScore();
+        mainManager.SaveBestScore();
     }
 
     public void UpdateBestScore()
