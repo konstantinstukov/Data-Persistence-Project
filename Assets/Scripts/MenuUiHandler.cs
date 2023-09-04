@@ -21,4 +21,9 @@ public class MenuUiHandler : MonoBehaviour
         Application.Quit();
 #endif
     }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
